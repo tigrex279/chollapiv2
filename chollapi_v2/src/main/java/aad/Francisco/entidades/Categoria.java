@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "categaria")
 @NamedQuery(name="Categoria.findAll", query="SELECT C FROM Categoria c")
-public class Categaria {
+public class Categoria {
 	private static final Long serialVersionID = 1L;
 	
 	@Id

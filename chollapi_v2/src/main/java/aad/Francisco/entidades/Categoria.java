@@ -1,13 +1,18 @@
 package aad.Francisco.entidades;
 
+import java.util.List;
+
 import org.hibernate.annotations.Generated;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.NamedQuery;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -25,7 +30,9 @@ public class Categoria {
 	
 	@Column
 	private String descripcion;
-
+	
+	@OneToMany(mappedBy = "university", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Producto> productos;
 	
 	
 	public Long getId() {

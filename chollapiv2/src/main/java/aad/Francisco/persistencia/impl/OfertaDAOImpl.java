@@ -12,7 +12,7 @@ import aad.Francisco.persistencia.jpa.Utilidades;
 
 @Repository
 @Component("OfertaDAO")
-public class OfertaDAOImpl extends GenericDAOImpl<Oferta, Long> implements OfertaDAO{
+public class OfertaDAOImpl extends GenericDAOImpl<Oferta, Long> implements OfertaDAO {
 
 		@SuppressWarnings("uncheked")
 		public List<Oferta> ultimosDiez(){
@@ -21,5 +21,4 @@ public class OfertaDAOImpl extends GenericDAOImpl<Oferta, Long> implements Ofert
 					+ "by o.fechaHora desc 10", Oferta.class).getResultList();
 			return ofertas;
 		}
-		
 }

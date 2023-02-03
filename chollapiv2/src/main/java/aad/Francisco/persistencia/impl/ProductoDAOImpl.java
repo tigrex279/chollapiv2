@@ -7,7 +7,7 @@ import aad.Francisco.entidades.Producto;
 import aad.Francisco.persistencia.ProductoDAO;
 
 @Repository
-@Component("")
+@Component("ProductoDAO")
 public class ProductoDAOImpl extends GenericDAOImpl<Producto, Long> implements ProductoDAO{
 
 }
